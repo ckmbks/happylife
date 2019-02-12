@@ -1,8 +1,8 @@
 package ckmbks.happylife.domain.user.enums;
 
 public enum UserType {
-    InnerUser("系统用户", 1),
-    OuterUser("外部用户", 2);
+    InnerUser("系统用户", 0),
+    OuterUser("外部用户", 1);
 
     private String name;
     private int index;
