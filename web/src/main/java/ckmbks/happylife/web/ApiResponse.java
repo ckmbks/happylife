@@ -9,14 +9,14 @@ public class ApiResponse {
     }
 
     public ApiResponse(Exception e) {
-        setIsSuccess(false);
+        setSuccess(false);
         setErrorMessage(e.getMessage());
     }
 
-    private String ErrorMessage;
+    private String errorMessage;
 
-    private Object Data;
+    private Object data;
 
-    private boolean IsSuccess = true;
+    private boolean isSuccess = true;
 
 }

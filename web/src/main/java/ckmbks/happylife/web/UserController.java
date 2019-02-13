@@ -13,7 +13,7 @@ public class UserController extends BaseApiController {
     @Autowired
     private UserService userService;
 
-    @RequestMapping(value = "/user/login", method = RequestMethod.GET)
+    @RequestMapping(value = "/user/login", method = {RequestMethod.GET, RequestMethod.POST})
     public User login(String userName, String password) {
         return userService.login(userName, password);
     }
