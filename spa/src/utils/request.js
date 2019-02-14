@@ -1,4 +1,5 @@
 import axios from 'axios'
+import Qs from 'qs'
 import {
   Message
 } from 'element-ui'
@@ -10,7 +11,11 @@ import {
 // create an axios instance
 const service = axios.create({
   baseURL: process.env.BASE_API, // api 的 base_url
-  timeout: 5000 // request timeout
+  timeout: 30000, // request timeout
+  transformRequest: data => {
+    data = Qs.stringify(data)
+    return data
+  }
 })
 
 // request interceptor
@@ -41,7 +46,7 @@ service.interceptors.response.use(
         duration: 5 * 1000
       })
     } else {
-      return response
+      return response.data
     }
   },
   /**

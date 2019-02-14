@@ -60,8 +60,7 @@ export const constantRouterMap = [
   },
   {
     path: '/401',
-    component: () => import('@/views/errorPage/401'),
-    hidden: true
+    component: () => import('@/views/errorPage/401')
   },
   {
     path: '',
